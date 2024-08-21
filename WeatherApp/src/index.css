@@ -74,3 +74,9 @@ button:focus-visible {
 .search{
   margin-left: 10px;
 }
+.weatherImage{
+  border-radius: 20%;
+}
+.suggestion:hover{
+  cursor: pointer;
+}

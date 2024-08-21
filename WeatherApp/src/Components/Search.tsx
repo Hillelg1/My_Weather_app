@@ -16,7 +16,7 @@ function Search({ location, onSearchChange, onSearchSubmit }: SearchProps) {
         placeholder="Enter location"
         className="searchBar"
       />
-      <button type="submit" className="search">
+      <button type="submit" className="searchBar">
         Search
       </button>
     </form>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { WeatherForecastData } from "./Utils";
 import { getImage } from "./Utils";
 

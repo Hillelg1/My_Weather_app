@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { WeatherData } from "./Utils";
 import WeatherDisplay from "./WeatherDisplay";
 import WeatherForecast from "./WeatherForecast";

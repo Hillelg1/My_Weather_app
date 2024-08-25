@@ -45,7 +45,9 @@ const WeatherForecast = ({ forecastData }: WeatherForecastProps) => {
               groupedByDay[date].map((entry: any, idx: number) => (
                 <div key={idx} className="hour-forecast">
                   <img
-                    src={`../images/${getImage(entry.weather[0].description)}`}
+                    src={`${process.env.PUBLIC_URL}../images/${getImage(
+                      entry.weather[0].description
+                    )}`}
                     alt="forecast"
                     className="forecast-image"
                   />

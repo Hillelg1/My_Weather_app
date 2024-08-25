@@ -10,7 +10,9 @@ const WeatherDisplay = ({ weatherData }: weatherDisplayProps) => {
     <div className="weather-box">
       <div className="image-container">
         <img
-          src={`../images/${getImage(weatherData.weather[0].description)}`}
+          src={`${process.env.PUBLIC_URL}../images/${getImage(
+            weatherData.weather[0].description
+          )}`}
           alt="weather image"
           className="weather-image"
         />

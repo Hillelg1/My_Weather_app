@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 type AutoCompleteProps = {
-  onSelect: (cit: string) => void;
-  location: string;
-  onSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSelect: (city: string) => void;
+
   onSearchSubmit: (e: React.FormEvent) => void;
 };
 
 const AutoComplete = ({
   onSelect,
-  location,
-  onSearchChange,
+
   onSearchSubmit,
 }: AutoCompleteProps) => {
   const [input, selectInput] = useState("");

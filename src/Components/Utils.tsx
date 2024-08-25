@@ -63,7 +63,8 @@ export const WeatherImage: WeatherImages = {
   "broken clouds": "scatteredClouds.png",
 };
 export const getImage = (condition: string) => {
-  return WeatherImage[condition] || "default.png";
+  const imageName = WeatherImage[condition];
+  return `/images/${imageName}` || "";
 };
 
 export interface WeatherData {

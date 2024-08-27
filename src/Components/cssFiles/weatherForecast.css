@@ -4,14 +4,7 @@
     clear: both;
   
   }
-  .hour-forecast{
-    float: left;
-    margin-left: 5px;
-    width: 100px;
-    height: 100px;
-    border-radius: 20%;
-    margin-top: 10px;
-  }
+  
   .hour-forecast p{
     font-size: 10px;
     color: #000000;
@@ -30,14 +23,14 @@
   .forecastButton{
     margin-top: 10px;
   }
-  .each-hour{
-    float: inline-start;
-    position: relative;
-    clear: both;
-  }
+  
   .card{
     width: 100px;
     height: 100px;
+    float: left;
+    margin-left: 5px;
+    border-radius: 20%;
+    margin-top: 10px;
   }
   .hour-forecast-card {
     width: 100px; /* Adjust the width as needed */

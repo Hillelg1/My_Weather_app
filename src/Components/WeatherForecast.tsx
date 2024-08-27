@@ -44,8 +44,8 @@ const WeatherForecast = ({ forecastData }: WeatherForecastProps) => {
             className={`forecast-details ${active === date ? "show" : "hide"}`}
           >
             {active == date &&
-              groupedByDay[date].map((entry: any, idx: number) => (
-                <div className="card hour-forecast hour-forecast-card">
+              groupedByDay[date].map((entry: any) => (
+                <div className="card hour-forecast-card">
                   <div className="card-body">
                     <img
                       src={`${getImage(entry.weather[0].description)}`}

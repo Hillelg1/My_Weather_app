@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "./cssFiles/autocomplete.css";
 type AutoCompleteProps = {
   onSelect: (city: string) => void;
 
@@ -20,7 +20,9 @@ const AutoComplete = ({
         `https://api.openweathermap.org/geo/1.0/direct?q=${myInput}&limit=5&appid=${ApiKey}`
       );
       const data = await get.json();
-      return data.map((city: any) => `${city.name}, ${city.country}`);
+      return data.map(
+        (city: any) => `${city.name},${city.state ? city.state : city.country}`
+      );
     } catch (error) {
       console.error(error);
       return [];
@@ -72,7 +74,7 @@ const AutoComplete = ({
               onClick={() => handleSelect(suggestion)}
               className="suggestion"
             >
-              {suggestion}
+              <p className="li-auto">{suggestion}</p>
             </li>
           ))}
         </ul>

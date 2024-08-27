@@ -1,6 +1,6 @@
 import { WeatherData } from "./Utils";
 import { getImage } from "./Utils";
-
+import "./cssFiles/weatherDisplay.css";
 interface weatherDisplayProps {
   weatherData: WeatherData;
 }

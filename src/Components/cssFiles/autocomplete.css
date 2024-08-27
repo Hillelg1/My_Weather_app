@@ -1,0 +1,28 @@
+.searchBar{
+    width: 80%;
+    height: 30px;
+    font-size: 25px;
+    
+  }
+  .search{
+    margin-left: 10px;
+  }
+  .search,.searchBar{
+    margin-top: auto;
+  }
+  
+  .suggestion:hover{
+    cursor: pointer;
+  }
+  .li-auto{
+    color: #ddd;
+  }
+
+  @media only screen and (max-width: 500px){
+.searchBar{
+    width: 50%;
+}
+.search{
+    margin-left: 5px;
+}
+  }

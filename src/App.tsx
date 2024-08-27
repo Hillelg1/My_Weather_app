@@ -1,4 +1,6 @@
 import WeatherApp from "./Components/WeatherApp";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 const App = () => {
   return (
     <div className="app-container">

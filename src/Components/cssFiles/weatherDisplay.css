@@ -1,0 +1,32 @@
+.weather-box {
+    position: relative; /* Make weather-box the containing block for absolute positioning */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px; /* Adjust width as needed */
+    background-color: #ffffff; /* Light background color */
+    margin: 20px auto; /* Center the box horizontally on the page */
+    text-align: center; /* Center text inside the box */
+  }
+  
+  .image-container {
+    position: absolute; /* Enable absolute positioning */
+    top: 10px; /* Adjust as needed to position the image vertically */
+    right: 10px; /* Adjust as needed to position the image horizontally */
+  }
+  
+  .weather-image {
+    width: 40px; /* Set a width for the image */
+    height: 40px; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 100%;
+  }
+  
+  /* Optional: Style for the text inside weather-box */
+  .weather-box p {
+    margin: 5px 0; /* Add some space between the text elements */
+    font-size: 1.2rem; /* Adjust font size */
+    color: #333; /* Darker text color */
+  }

@@ -3,6 +3,7 @@ import { WeatherData } from "./Utils";
 import WeatherDisplay from "./WeatherDisplay";
 import WeatherForecast from "./WeatherForecast";
 import { WeatherForecastData } from "./Utils";
+import "./cssFiles/location.css";
 
 function LocationWeather() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
@@ -28,7 +29,6 @@ function LocationWeather() {
       );
       const data = await response.json();
       setWeatherData(data);
-      await new Promise((resolve) => setTimeout(resolve, 1500));
       const response1 = await fetch(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
       );
@@ -53,7 +53,9 @@ function LocationWeather() {
       {error && <p>{error}</p>}
       {weatherData && <WeatherDisplay weatherData={weatherData} />}
       {forecastData && <WeatherForecast forecastData={forecastData} />}
-      {!weatherData && !forecastData && !error && <p>Loading...</p>}
+      {!weatherData && !forecastData && !error && (
+        <p className="loading">Loading...</p>
+      )}
     </div>
   );
 }

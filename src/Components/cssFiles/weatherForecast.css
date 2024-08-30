@@ -51,7 +51,9 @@
   
   .card-title, .card-text {
     font-size: 12px; /* Adjust text size */
-    text-align: center;
+  }
+  .card-text{
+    margin-bottom: 20px;
   }
   .hour-forecast-card .card-body {
     display: flex;

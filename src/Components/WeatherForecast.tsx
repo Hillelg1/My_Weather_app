@@ -56,7 +56,7 @@ const WeatherForecast = ({ forecastData }: WeatherForecastProps) => {
                       {new Date(entry.dt * 1000).toLocaleTimeString()}
                     </h6>
                     <p className="card-text">
-                      Temp: {Math.floor((entry.main.temp * 9) / 5 + 32)} °F
+                      {Math.floor((entry.main.temp * 9) / 5 + 32)}°F
                     </p>
                     <p className="card-text">{entry.weather[0].description}</p>
                   </div>

@@ -74,6 +74,14 @@ export interface WeatherData {
   }[];
   main: {
     temp: number;
+    temp_min: number;
+    temp_max: number;
+    feels_like: number;
+  };
+  wind: {
+    speed: number;
+    deg: number;
+    gust: number;
   };
   // Add more pro
 }

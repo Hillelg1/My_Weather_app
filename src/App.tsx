@@ -1,5 +1,6 @@
 import WeatherApp from "./Components/WeatherApp";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./index.css";
 const App = () => {
   return (

@@ -29,14 +29,15 @@
     height: 100px;
     float: left;
     margin-left: 5px;
-    border-radius: 20%;
     margin-top: 10px;
   }
   .hour-forecast-card {
-    width: 100px; /* Adjust the width as needed */
-    height: 150px; /* Set a fixed height */
-    margin: 5px; /* Add some spacing between cards */
-    display: inline-block; /* Ensures cards are inline */
+    
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 100px; /* Adjust width */
+    height: 150px; /* Fixed height */
+    background-color: #fff;
+    
   }
   
   .card-img-top {
@@ -47,6 +48,7 @@
   .card-body {
     padding: 10px; /* Adjust padding inside the card */
     max-height: 172.8px;
+    text-align: left;
   }
   
   .card-title, .card-text {
@@ -55,10 +57,29 @@
   .card-text{
     margin-bottom: 20px;
   }
-  .hour-forecast-card .card-body {
+  .card-text-weather{
+    text-align: left;
+    
+  }
+   .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
   }
-  
+  .scrollmenu{
+    display: flex; /* Use flexbox to arrange items horizontally */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Keeps the cards from wrapping */
+  gap: 10px
+  }
+  .scrollmenu hour-forecast-card{
+    display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  }
+  .date-title{
+    color: white;
+  }

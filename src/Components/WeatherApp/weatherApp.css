@@ -1,0 +1,57 @@
+.weather-app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weather-app-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .autocomplete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .weather-display {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  
+  
+  
+  .weather-display .temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .weather-display .condition {
+    font-size: 1.2rem;
+  }
+  
+  .weather-display .details {
+    font-size: 1rem;
+    margin-top: 10px;
+  }

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { WeatherForecastData } from "./Utils";
-import { getImage } from "./Utils";
-import "./cssFiles/weatherForecast.css";
+import { WeatherForecastData } from "../Utils";
+import { getImage } from "../Utils";
+import "./weatherForecast.css";
 interface WeatherForecastProps {
   forecastData: WeatherForecastData | null;
 }

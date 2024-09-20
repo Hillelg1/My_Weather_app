@@ -1,15 +1,7 @@
-.searchBar{
-    width: 80%;
-    height: 30px;
-    font-size: 25px;
-    
-  }
-  .search{
-    margin-left: 10px;
-  }
-  .search,.searchBar{
-    margin-top: auto;
-  }
+
+
+
+
   
   .suggestion:hover{
     cursor: pointer;
@@ -27,3 +19,4 @@
     margin-left: 5px;
 }
   }
+  

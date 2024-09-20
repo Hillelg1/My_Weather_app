@@ -3,14 +3,15 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   background-color: #242424;
+  width: 100%;
 
 }
-body, html{
+body, html,#root{
   overflow: auto;
   background-color:  #333 !important;
+  width: 100%;
 }
 
 h1,h2{
@@ -89,6 +90,7 @@ button:focus-visible {
 .app-container{
   position: sticky;
   top: 0px;
+  width: 100%;
 }
 /* WeatherApp.css */
 

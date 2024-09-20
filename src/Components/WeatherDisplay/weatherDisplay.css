@@ -3,17 +3,14 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 300px; /* Adjust width as needed */
-    background-color: #ffffff; /* Light background color */
+    width: 350px; 
     margin: 20px auto; /* Center the box horizontally on the page */
     text-align: center; /* Center text inside the box */
+    margin-top: 50px;
+    background-image: linear-gradient(45deg, #2f4680, #500ae4);
   }
   
-  .image-container {
-    position: absolute; /* Enable absolute positioning */
-    top: 10px; /* Adjust as needed to position the image vertically */
-    right: 10px; /* Adjust as needed to position the image horizontally */
-  }
+ 
   
   .weather-image {
     width: 40px; /* Set a width for the image */
@@ -28,5 +25,6 @@
   .weather-box p {
     margin: 5px 0; /* Add some space between the text elements */
     font-size: 1.2rem; /* Adjust font size */
-    color: #333; /* Darker text color */
+    color: white; /* Darker text color */
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }

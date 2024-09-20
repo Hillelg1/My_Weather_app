@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 type WeatherImages = {
   [key: string]: string;
 };
@@ -99,3 +100,63 @@ export interface WeatherForecastData {
     }[];
   }[];
 }
+
+// utils/api.js or Utils.ts
+
+export const getLocation = () => {
+  const [forecastData, setFull] = useState<WeatherForecastData | null>(null);
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getWeatherData, showError);
+    } else {
+      setError("Geolocation is not supported by this browser.");
+    }
+  }, []);
+
+  const getWeatherData = async (position: GeolocationPosition) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    try {
+      const apiKey = import.meta.env.VITE_API_KEY;
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
+      );
+      const data = await response.json();
+      setWeatherData(data);
+      const response1 = await fetch(
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
+      );
+      const data1 = await response1.json();
+      setFull(data1);
+    } catch (error) {
+      setError("Error fetching weather data.");
+    }
+  };
+
+  const showError = (error: GeolocationPositionError) => {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        setError("permision denied");
+        break;
+      // Handle other error cases...
+    }
+  };
+
+  return { weatherData, forecastData };
+};
+export const fetchWeatherData = async (
+  lat: number,
+  lon: number,
+  apiKey: string
+) => {
+  const forecastResponse = await fetch(
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+  );
+  const forecastData = await forecastResponse.json();
+
+  return forecastData;
+};

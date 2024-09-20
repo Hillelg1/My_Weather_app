@@ -113,6 +113,7 @@ export const getLocation = () => {
       navigator.geolocation.getCurrentPosition(getWeatherData, showError);
     } else {
       setError("Geolocation is not supported by this browser.");
+      console.log(error);
     }
   }, []);
 

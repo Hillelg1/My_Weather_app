@@ -58,7 +58,10 @@ const WeatherForecast = ({ forecastData }: WeatherForecastProps) => {
                     <p className="card-text">
                       {Math.floor((entry.main.temp * 9) / 5 + 32)}°F
                     </p>
-                    <p className="card-text">{entry.weather[0].description}</p>
+                    <p className="card-text">
+                      {entry.weather[0].description[0].toUpperCase() +
+                        entry.weather[0].description.slice(1)}
+                    </p>
                   </div>
                 </div>
               ))}

@@ -3,15 +3,46 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 350px; 
+    width: 100%; 
     margin: 20px auto; /* Center the box horizontally on the page */
     text-align: center; /* Center text inside the box */
-    margin-top: 50px;
-    background-image: linear-gradient(45deg, #2f4680, #500ae4);
+    margin-top: -10px;
+    height: 400px;
+    background-image: url('images/fewClouds1.png')
   }
-  
- 
-  
+  .name{
+    font-size: 50px;
+  }
+  .description{
+    font-size: 30px;
+  }
+  .weather-info-container{
+    margin-top: -50px;
+  }
+  .scatteredClouds{
+    background-image: url('images/scatteredClouds1.png');
+  }
+  .thunderStorm{
+    background-image: url('images/thunderStorm1.png');
+  }
+  .rainShower{
+    background-image: url('images/rainShower1.png');
+  }
+  .rain{
+    background-image: url('images/rain1.png');
+  }
+  .Snow{
+    background-image: url('images/snow1.png');
+  }
+  .clear{
+    background-image: url('images/clear1.png');
+  }
+  .fewClouds{
+    background-image: url('images/fewClouds1.png')
+  }
+  .defaultWeather{
+    background-image: url('images/fewClouds1.png')
+  }
   .weather-image {
     width: 40px; /* Set a width for the image */
     height: 40px; /* Maintain aspect ratio */
@@ -24,7 +55,7 @@
   /* Optional: Style for the text inside weather-box */
   .weather-box p {
     margin: 5px 0; /* Add some space between the text elements */
-    font-size: 1.2rem; /* Adjust font size */
     color: white; /* Darker text color */
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
+

@@ -1,6 +1,4 @@
 import { WeatherData } from "../Utils";
-import { getImage } from "../Utils";
-
 import "./weatherDisplay.css";
 
 interface weatherDisplayProps {
@@ -9,16 +7,12 @@ interface weatherDisplayProps {
 
 const WeatherDisplay = ({ weatherData }: weatherDisplayProps) => {
   return (
-    <div>
-      <p>{weatherData.name}</p>
-      <div className="image-container">
-        <img
-          src={`${getImage(weatherData.weather[0].description)}`}
-          alt="weather image"
-          className="weather-image"
-        />
-      </div>
-      <p>{weatherData.weather[0].description}</p>
+    <div className="weather-info-container">
+      <p className="name">{weatherData.name}</p>
+      <p className="description">
+        {weatherData.weather[0].description[0].toUpperCase() +
+          weatherData.weather[0].description.slice(1)}
+      </p>
       <p>Temp: {Math.floor((weatherData.main.temp * 9) / 5 + 32)} °F</p>
 
       <p>

@@ -1,6 +1,9 @@
-
+.suggestion-list{
+    position: absolute;
+}
 .suggestion{
     color: white;
+    max-width: 200px;
 }
 .suggestion:hover{
 background-color: grey;

@@ -6,6 +6,12 @@
   .suggestion:hover{
     cursor: pointer;
   }
+  .suggestion-container{
+    max-width: 200px;
+  }
+  .autocomplete-container{
+    position: absolute;
+  }
   .li-auto{
     color: #ddd;
   }

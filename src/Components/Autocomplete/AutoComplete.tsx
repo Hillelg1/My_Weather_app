@@ -50,6 +50,7 @@ const Autocomplete = ({ onSelect, onSearchSubmit }: AutocompleteProps) => {
         value={input}
         onChange={setInput}
         onSearchSubmit={onSearchSubmit}
+        handleSelect={handleSelect}
       />
       {!(suggestions == null) && (
         <div className="suggestion-container">

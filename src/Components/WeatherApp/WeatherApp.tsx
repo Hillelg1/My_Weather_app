@@ -4,12 +4,12 @@ import { WeatherData } from "../Utils";
 import WeatherDisplay from "../WeatherDisplay/WeatherDisplay";
 import WeatherForecast from "../WeatherForecast/WeatherForecast";
 import { WeatherForecastData } from "../Utils";
+import { WeatherImage } from "../Utils";
 import Autocomplete from "../Autocomplete/AutoComplete";
 function WeatherApp() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const apiKey = import.meta.env.VITE_API_KEY;
   const [forecast, setForecast] = useState<WeatherForecastData | null>(null);
-
   const fetchWeather = async (city: string) => {
     try {
       const response = await fetch(
@@ -38,10 +38,18 @@ function WeatherApp() {
   const handleSelect = (city: string) => {
     fetchWeather(city);
   };
+  const getClass = (weather: string) => {
+    const className = WeatherImage[weather] || "defaultWeather";
+    return className.replace(".png", "");
+  };
   const { weatherData, forecastData } = getLocation();
   return (
-    <div className="weather-app-container">
-      <div className="weather-box">
+    <div className={`weather-app-container`}>
+      <div
+        className={`weather-box ${
+          weather ? getClass(weather.weather[0].description) : ""
+        } ${weatherData ? getClass(weatherData.weather[0].description) : ""}`}
+      >
         <Autocomplete
           onSearchSubmit={handleSearchSubmit}
           onSelect={handleSelect}

@@ -1,6 +1,5 @@
 import React from "react";
 import "./searchInput.css";
-import { useState } from "react";
 type SearchInputProps = {
   value: string;
   onChange: (value: string) => void;
@@ -14,8 +13,6 @@ const SearchInput = ({
   onSearchSubmit,
   handleSelect,
 }: SearchInputProps) => {
-  const [input, setinput] = useState<string | null>("");
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   };

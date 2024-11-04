@@ -8,7 +8,8 @@
     text-align: center; /* Center text inside the box */
     margin-top: -10px;
     height: 400px;
-    background-image: url('/images/fewClouds1.png')
+    background-image: url('/images/fewClouds1.png');
+    background-size: cover;
   }
   .name{
     font-size: 50px;

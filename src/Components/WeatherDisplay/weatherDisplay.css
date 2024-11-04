@@ -8,7 +8,7 @@
     text-align: center; /* Center text inside the box */
     margin-top: -10px;
     height: 400px;
-    background-image: url('images/fewClouds1.png')
+    background-image: url('/images/fewClouds1.png')
   }
   .name{
     font-size: 50px;
@@ -20,28 +20,28 @@
     margin-top: -50px;
   }
   .scatteredClouds{
-    background-image: url('images/scatteredClouds1.png');
+    background-image: url('/images/scatteredClouds1.png');
   }
   .thunderStorm{
-    background-image: url('images/thunderStorm1.png');
+    background-image: url('/images/thunderStorm1.png');
   }
   .rainShower{
-    background-image: url('images/rainShower1.png');
+    background-image: url('/images/rainShower1.png');
   }
   .rain{
-    background-image: url('images/rain1.png');
+    background-image: url('/images/rain1.png');
   }
   .Snow{
-    background-image: url('images/snow1.png');
+    background-image: url('/images/snow1.png');
   }
   .clear{
-    background-image: url('images/clear1.png');
+    background-image: url('/images/clear1.png');
   }
   .fewClouds{
-    background-image: url('images/fewClouds1.png')
+    background-image: url('/images/fewClouds1.png')
   }
   .defaultWeather{
-    background-image: url('images/fewClouds1.png')
+    background-image: url('/images/fewClouds1.png')
   }
   .weather-image {
     width: 40px; /* Set a width for the image */

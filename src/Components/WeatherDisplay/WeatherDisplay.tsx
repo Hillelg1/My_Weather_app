@@ -7,8 +7,12 @@ interface weatherDisplayProps {
 
 const WeatherDisplay = ({ weatherData }: weatherDisplayProps) => {
   return (
-    <div className="weather-info-container">
-      <p className="name">{weatherData.name}</p>
+    <div
+      className={`weather-info-container ${
+        weatherData.weather[0].description[0] == "snow" ? "snowp" : ""
+      }`}
+    >
+      <p className="name">{weatherData.name} </p>
       <p className="description">
         {weatherData.weather[0].description[0].toUpperCase() +
           weatherData.weather[0].description.slice(1)}

@@ -48,7 +48,7 @@ function WeatherApp() {
       <div
         className={`weather-box ${
           weather ? getClass(weather.weather[0].description) : ""
-        } ${weatherData ? getClass(weatherData.weather[0].description) : ""}`}
+        }`}
       >
         <Autocomplete
           onSearchSubmit={handleSearchSubmit}
@@ -68,6 +68,9 @@ function WeatherApp() {
           </div>
         )}
       </div>
+      {!forecast && !forecastData && (
+        <p className="loading">Loading forecast...</p>
+      )}
       {(forecast || forecastData) && (
         <>
           <WeatherForecast forecastData={forecast ? forecast : forecastData} />
